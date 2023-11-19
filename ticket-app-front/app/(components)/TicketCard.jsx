@@ -15,8 +15,16 @@ const TicketCard = () => {
       <h4>Ticket Title</h4>
       <hr className="h-px border-0 bg-page mb-2" />
       <p className="whitespace-pre-wrap">Description</p>
-      <ProgressDisplay />
-      <StatusDisplay />
+      <div className="flex-grow"></div>
+      <div className="flex mt-2">
+        <div className="flex flex-col">
+          <p className="text-xs my-1">19/11/2023 5:52</p>
+          <ProgressDisplay />
+        </div>
+        <div className="ml-auto flex items-end">
+          <StatusDisplay />
+        </div>
+      </div>
     </div>
   );
 };
