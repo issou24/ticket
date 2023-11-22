@@ -36,9 +36,10 @@ const TicketForm = ({ ticket }) => {
     if (EDITMODE) {
       const res = await fetch(`/api/Tickets/${ticket._id}`, {
         method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
         body: JSON.stringify({ formData }),
-        //@ts-ignore
-        "Content-Type": "application/json",
       });
 
       if (!res.ok) {
@@ -56,6 +57,7 @@ const TicketForm = ({ ticket }) => {
         throw new Error("Failed to create ticket");
       }
     }
+
     router.refresh();
     router.push("/");
   };
