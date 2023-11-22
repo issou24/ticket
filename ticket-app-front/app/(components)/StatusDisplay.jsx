@@ -1,4 +1,4 @@
-/* const StatusDisplay = ({ status }) => {
+const StatusDisplay = ({ status = "not started" }) => {
   const getColor = (status) => {
     let color = "bg-slate-700";
     switch (status.toLowerCase()) {
@@ -18,7 +18,7 @@
   return (
     <span
       className={`inline-block rounded-full px-2 py-1 text-xs font-semibold text-gray-700 ${getColor(
-        { status }
+        status
       )}`}
     >
       {status}
@@ -28,7 +28,10 @@
 
 export default StatusDisplay;
 
-*/
+/*
+
+1.51.36 yt
+
 const StatusDisplay = ({ status = "not started" }) => {
   const getColor = (status) => {
     let color = "bg-slate-700";
@@ -61,3 +64,4 @@ const StatusDisplay = ({ status = "not started" }) => {
 };
 
 export default StatusDisplay;
+*/
