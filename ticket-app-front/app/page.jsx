@@ -9,6 +9,7 @@ const getTicket = async () => {
     return res.json();
   } catch (error) {
     console.log("Failed to get tickets", error);
+    return [];
   }
 };
 
