@@ -16,7 +16,7 @@ const getTicketById = async (id) => {
   }
 };
 
-const TicketPage = async ({ params }) => {
+let TicketPage = async ({ params }) => {
   const EDITMODE = params.id === "new" ? false : true;
   let updateTicketData = {};
 
